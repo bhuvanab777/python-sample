@@ -17,3 +17,9 @@ jobs:
       run: pip install pycryptodome
     - name: running python file 
       run: python aes_encode.py "hello world"
+    - name: upload artifacts
+	uses: actions/upload-artifact@v3
+	with:
+	  name: output-artifact
+	  path: output.txt
+

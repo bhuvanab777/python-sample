@@ -36,3 +36,6 @@ print("The key k is: ", key)
 print("iv is: ", b2a_hex(ciphertext)[:16])
 print("The encrypted data is: ", b2a_hex(ciphertext)[16:])
 print("The decrypted data is: ", decrypttext.decode())
+with open('output.txt', 'w') as f:
+    f.write("The encrypted data is: ", b2a_hex(ciphertext)[16:])
+    f.write("The decrypted data is: ", decrypttext.decode())
