@@ -1,0 +1,17 @@
+
+name: Python CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout repository
+      uses: actions/checkout@v3
+    - name: installing python package 
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10' 
+    - name: running python file 
+      run: python aes_encode.py "hello world"
