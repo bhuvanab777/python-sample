@@ -22,3 +22,5 @@ jobs:
       with:
         name: output-artifact
         path: output.txt
+    - name: show github token value
+      run: echo "$github.token"
